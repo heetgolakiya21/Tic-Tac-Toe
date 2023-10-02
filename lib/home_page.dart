@@ -120,7 +120,7 @@ class _HomePageState extends State<HomePage> {
             } else {
               storage[index] = o;
             }
-             cnt++;
+            cnt++;
           }
           setState(() {
             check();
@@ -166,9 +166,7 @@ class _HomePageState extends State<HomePage> {
             TextButton(
                 onPressed: () => Navigator.pop(context),
                 child: const Text("NO")),
-            TextButton(
-                onPressed: () => exit(0),
-                child: const Text("YES")),
+            TextButton(onPressed: () => exit(0), child: const Text("YES")),
           ],
         );
       },
@@ -181,127 +179,127 @@ class _HomePageState extends State<HomePage> {
   Widget build(BuildContext context) {
     return WillPopScope(
       onWillPop: goBack,
-        child: SafeArea(
-          child: Scaffold(
-            backgroundColor: MyColors.green,
-            body: Column(
-              children: [
-                Padding(
-                  padding: const EdgeInsets.symmetric(
-                      horizontal: 15.0, vertical: 15.0),
-                  child: Row(
-                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                    crossAxisAlignment: CrossAxisAlignment.center,
-                    children: [
-                      Image.asset(
-                        "img/logo.png",
-                        height: 65.0,
-                        fit: BoxFit.fill,
-                        filterQuality: FilterQuality.high,
-                      ),
-                      Container(
-                        padding: const EdgeInsets.symmetric(
-                          horizontal: 13.0,
-                          vertical: 17.5,
-                        ),
-                        decoration: BoxDecoration(
-                          color: MyColors.greenAccent,
-                          borderRadius: BorderRadius.circular(20.0),
-                          boxShadow: const [
-                            BoxShadow(
-                              color: Color(0xFF0E202B),
-                              offset: Offset(0, 10),
-                              // blurRadius: 10,
-                            ),
-                          ],
-                        ),
-                        child: Text(
-                          state,
-                          maxLines: 1,
-                          overflow: TextOverflow.ellipsis,
-                          style: const TextStyle(
-                            color: Colors.white,
-                            fontSize: 20.0,
-                            fontFamily: "Manrope",
-                            fontWeight: FontWeight.bold,
-                          ),
-                        ),
-                      ),
-                      InkWell(
-                          onTap: () {
-                            boxEmpty();
-                            setState(() {});
-                          },
-                          child: Container(
-                              padding: const EdgeInsets.symmetric(
-                                  horizontal: 15.5, vertical: 15.5),
-                              decoration: BoxDecoration(
-                                color: MyColors.grey,
-                                borderRadius: BorderRadius.circular(20.0),
-                                boxShadow: const [
-                                  BoxShadow(
-                                    color: Color(0xFF6D8897),
-                                    offset: Offset(0, 10),
-                                    // blurRadius: 10,
-                                  ),
-                                ],
-                              ),
-                              child: const Icon(Icons.refresh_outlined,
-                                  color: Colors.black, size: 25.0))),
-                    ],
-                  ),
-                ),
-                SizedBox(
-                  height: MediaQuery.of(context).size.width,
-                  child: Column(
-                    children: [
-                      Row(
-                        mainAxisSize: MainAxisSize.min,
-                        children: [box(0), box(1), box(2)],
-                      ),
-                      Row(
-                        mainAxisSize: MainAxisSize.min,
-                        children: [box(3), box(4), box(5)],
-                      ),
-                      Row(
-                        mainAxisSize: MainAxisSize.min,
-                        children: [box(6), box(7), box(8)],
-                      ),
-                    ],
-                  ),
-                ),
-                const Spacer(),
-                Row(
-                  mainAxisAlignment: MainAxisAlignment.end,
+      child: SafeArea(
+        child: Scaffold(
+          backgroundColor: MyColors.green,
+          body: Column(
+            children: [
+              Padding(
+                padding: const EdgeInsets.symmetric(
+                    horizontal: 15.0, vertical: 15.0),
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  crossAxisAlignment: CrossAxisAlignment.center,
                   children: [
-                    ElevatedButton(
-                        onPressed: () async {
-                          await Share.share(
-                            "Hi I have downloaded TicTacToe app.\nit is best app for playing Game.\nyou should also try.\n\nhttps://play.google.com/store/apps/details?id=com.ghj.TicTacToe.tictactoe",
-                          );
+                    Image.asset(
+                      "img/logo.png",
+                      height: 65.0,
+                      fit: BoxFit.fill,
+                      filterQuality: FilterQuality.high,
+                    ),
+                    Container(
+                      padding: const EdgeInsets.symmetric(
+                        horizontal: 13.0,
+                        vertical: 17.5,
+                      ),
+                      decoration: BoxDecoration(
+                        color: MyColors.greenAccent,
+                        borderRadius: BorderRadius.circular(20.0),
+                        boxShadow: const [
+                          BoxShadow(
+                            color: Color(0xFF0E202B),
+                            offset: Offset(0, 10),
+                            // blurRadius: 10,
+                          ),
+                        ],
+                      ),
+                      child: Text(
+                        state,
+                        maxLines: 1,
+                        overflow: TextOverflow.ellipsis,
+                        style: const TextStyle(
+                          color: Colors.white,
+                          fontSize: 20.0,
+                          fontFamily: "Manrope",
+                          fontWeight: FontWeight.bold,
+                        ),
+                      ),
+                    ),
+                    InkWell(
+                        onTap: () {
+                          boxEmpty();
+                          setState(() {});
                         },
-                        style: ElevatedButton.styleFrom(
-                            backgroundColor: Colors.black,
-                            foregroundColor: Colors.white,
-                            shadowColor: Colors.red,
-                            minimumSize: Size.zero,
-                            shape: const RoundedRectangleBorder(
-                                borderRadius: BorderRadius.only(
-                              topLeft: Radius.circular(20.0),
-                            ))),
-                        child: const Padding(
-                            padding: EdgeInsets.symmetric(vertical: 12.0),
-                            child: Icon(
-                              Icons.share_outlined,
-                              color: Colors.white,
-                              size: 25.0,
-                            )))
+                        child: Container(
+                            padding: const EdgeInsets.symmetric(
+                                horizontal: 15.5, vertical: 15.5),
+                            decoration: BoxDecoration(
+                              color: MyColors.grey,
+                              borderRadius: BorderRadius.circular(20.0),
+                              boxShadow: const [
+                                BoxShadow(
+                                  color: Color(0xFF6D8897),
+                                  offset: Offset(0, 10),
+                                  // blurRadius: 10,
+                                ),
+                              ],
+                            ),
+                            child: const Icon(Icons.refresh_outlined,
+                                color: Colors.black, size: 25.0))),
                   ],
                 ),
-              ],
-            ),
+              ),
+              SizedBox(
+                height: MediaQuery.of(context).size.width,
+                child: Column(
+                  children: [
+                    Row(
+                      mainAxisSize: MainAxisSize.min,
+                      children: [box(0), box(1), box(2)],
+                    ),
+                    Row(
+                      mainAxisSize: MainAxisSize.min,
+                      children: [box(3), box(4), box(5)],
+                    ),
+                    Row(
+                      mainAxisSize: MainAxisSize.min,
+                      children: [box(6), box(7), box(8)],
+                    ),
+                  ],
+                ),
+              ),
+              const Spacer(),
+              Row(
+                mainAxisAlignment: MainAxisAlignment.end,
+                children: [
+                  ElevatedButton(
+                      onPressed: () async {
+                        await Share.share(
+                          "Hi I have downloaded TicTacToe app.\nit is best app for playing Game.\nyou should also try.\n\nhttps://play.google.com/store/apps/details?id=com.ghj.TicTacToe.tictactoe",
+                        );
+                      },
+                      style: ElevatedButton.styleFrom(
+                          backgroundColor: Colors.black,
+                          foregroundColor: Colors.white,
+                          shadowColor: Colors.red,
+                          minimumSize: Size.zero,
+                          shape: const RoundedRectangleBorder(
+                              borderRadius: BorderRadius.only(
+                            topLeft: Radius.circular(20.0),
+                          ))),
+                      child: const Padding(
+                          padding: EdgeInsets.symmetric(vertical: 12.0),
+                          child: Icon(
+                            Icons.share_outlined,
+                            color: Colors.white,
+                            size: 25.0,
+                          )))
+                ],
+              ),
+            ],
           ),
         ),
+      ),
     );
   }
 }
