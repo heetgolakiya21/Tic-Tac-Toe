@@ -25,7 +25,7 @@ class _SplashPageState extends State<SplashPage> {
   Future<void> dataLoad() async {
     await Future.delayed(const Duration(milliseconds: 1500)).then((value) =>
         ScaffoldMessenger.of(context).showSnackBar(SnackBar(
-            content: const Text("Welcome!",
+            content: const Text("Welcome",
                 style: TextStyle(color: Colors.black, fontSize: 15.0)),
             duration: const Duration(milliseconds: 1500),
             backgroundColor: MyColors.grey,
@@ -35,7 +35,7 @@ class _SplashPageState extends State<SplashPage> {
             behavior: SnackBarBehavior.floating,
             dismissDirection: DismissDirection.horizontal)));
 
-    await Navigator.pushReplacement(
+    Navigator.pushReplacement(
       context,
       MaterialPageRoute(
         builder: (context) {
